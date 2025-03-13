@@ -13,4 +13,4 @@ macro <- WDI(indicator=indicators_macro,
          rir=FR.INR.RINR,
          country=factor(country))%>%
   select(-iso2c,-iso3c,-indicators_macro)
-write.csv(macro,"data/processed/macro.csv")
+# write.csv(macro_df,"data/processed/macro.csv")

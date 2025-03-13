@@ -1,4 +1,6 @@
-# outputs: US_GSIB_banks, US_DSIB_banks, CA_GSIB_banks, CA_DSIB_banks
+# outputs: 
+# string: US_GSIB_banks, US_DSIB_banks, CA_GSIB_banks, CA_DSIB_banks
+# df: all_bank_df
 
 library(readxl)
 
@@ -11,9 +13,11 @@ names(US_GSIB_data_list) <- US_GSIB_banks
 US_GSIB_data_list <- lapply(names(US_GSIB_data_list), function(name) {
   df <- US_GSIB_data_list[[name]]
   df$bank <- name
+  colnames(df) <- c("date","roe","t1cr","stock_price","mkt_cap","leverage_ratio","adj_ebitda","bank")
   return(df)
 })
 names(US_GSIB_data_list) <- US_GSIB_banks
+
 list2env(US_GSIB_data_list, envir = .GlobalEnv)
 
 # US - D-SIBs
@@ -25,6 +29,7 @@ names(US_DSIB_data_list) <- US_DSIB_banks
 US_DSIB_data_list <- lapply(names(US_DSIB_data_list), function(name) {
   df <- US_DSIB_data_list[[name]]
   df$bank <- name
+  colnames(df) <- c("date","roe","t1cr","stock_price","mkt_cap","leverage_ratio","adj_ebitda","bank")
   return(df)
 })
 names(US_DSIB_data_list) <- US_DSIB_banks
@@ -40,8 +45,9 @@ names(CA_GSIB_data_list) <- CA_GSIB_banks
 CA_GSIB_data_list <- lapply(names(CA_GSIB_data_list), function(name) {
   df <- CA_GSIB_data_list[[name]]
   df$bank <- name
-  return(df)
-})
+  colnames(df) <- c("date","roe","t1cr","stock_price","mkt_cap","leverage_ratio","adj_ebitda","bank")
+return(df)
+  })
 names(CA_GSIB_data_list) <- CA_GSIB_banks
 list2env(CA_GSIB_data_list, envir = .GlobalEnv)
 # CA - D-SIBs
@@ -53,12 +59,16 @@ names(CA_DSIB_data_list) <- CA_DSIB_banks
 CA_DSIB_data_list <- lapply(names(CA_DSIB_data_list), function(name) {
   df <- CA_DSIB_data_list[[name]]
   df$bank <- name
+  colnames(df) <- c("date","roe","t1cr","stock_price","mkt_cap","leverage_ratio","adj_ebitda","bank")
   return(df)
 })
 names(CA_DSIB_data_list) <- CA_DSIB_banks
 list2env(CA_DSIB_data_list, envir = .GlobalEnv)
 
 
+all_bank_list <- c(US_GSIB_data_list, US_DSIB_data_list,
+       CA_GSIB_data_list, CA_DSIB_data_list)
 
-
+all_bank_wise <- do.call(rbind, all_bank_list)
+# write.csv(all_bank_wise,"data/processed/all_bank_wise.csv")
 

@@ -1,9 +1,11 @@
+# output:
+# df: all_bank
 source("src/00_variables.R")
 source("src/01_import-bank-wise-data.R")
 macro<-read_csv("data/processed/macro.csv")
 
-#
-all_bank <- data.frame(
+# create a df to match bank, country and scale
+all_bank_bg <- data.frame(
   bank = c(US_GSIB_banks, US_DSIB_banks, CA_GSIB_banks, CA_DSIB_banks),
   country = c(rep("United States", length(c(US_GSIB_banks, US_DSIB_banks))),
               rep("Canada", length(c(CA_GSIB_banks, CA_DSIB_banks)))),
@@ -13,4 +15,5 @@ all_bank <- data.frame(
           rep("D", length(CA_DSIB_banks)))
 )
 
+# write.csv(all_bank_bg,"data/processed/all_bank_bg.csv")
 
