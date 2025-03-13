@@ -1,3 +1,16 @@
+# raw data
+data/raw/CA_D-SIBs
+data/raw/CA_G-SIBs
+data/raw/US_D-SIBs
+data/raw/US_G-SIBs
+
+# processed data
+data/processed
+
+# output
+graph/
+data/
+
 # History files
 .Rhistory
 .Rapp.history
