@@ -5,8 +5,10 @@ new sample data selected
 Period: 2011-2018
 
 **US**
+
 Macro:
 -	GDP, CPI, stock_idx, RIR (real interest rate)
+  
 Bankwise:
 -	Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj  EBIT (Earnings before interest and tax)
 
@@ -43,16 +45,21 @@ D-SIBs
 20.	BMO Financial Corp.
 
 G-SIBs
+
 **CA**
+
 Macro:
 -	GDP, CPI, stock_idx, RIR (real interest rate)
+
 Bankwise:
 -	Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj EBIT (Earnings before interest and tax)
+
 G-SIBs
 1.	RBC
 2.	TD
 3.	BMO
 4.	BNS
+
 D-SIBs
 1.	CIBC: cm
 2.	National Bank of Canada:na
