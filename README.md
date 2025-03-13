@@ -44,7 +44,6 @@ D-SIBs
 19.	Comerica: cma
 20.	BMO Financial Corp.
 
-G-SIBs
 
 **CA**
 
