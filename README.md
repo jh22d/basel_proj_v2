@@ -4,11 +4,12 @@ new sample data selected
 
 Period: 2011-2018
 
-US
+**US**
 Macro:
 -	GDP, CPI, stock_idx, RIR (real interest rate)
 Bankwise:
 -	Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj  EBIT (Earnings before interest and tax)
+
 G-SIBs
 1.	JPMORGAN CHASE & CO: jpm
 2.	Citigroup: c
@@ -18,6 +19,7 @@ G-SIBs
 6.	Wells Frago: wfc
 7.	BNY Mellon: bk
 8.	State Street: stt
+   
 D-SIBs
 1.	U.S. Bancorp:usb
 2.	Truist Financial:tfc
@@ -40,9 +42,8 @@ D-SIBs
 19.	Comerica: cma
 20.	BMO Financial Corp.
 
-
 G-SIBs
-CA
+**CA**
 Macro:
 -	GDP, CPI, stock_idx, RIR (real interest rate)
 Bankwise:
