@@ -1,3 +1,5 @@
+source("src/00_variables.R")
+
 library(WDI)
 library(tidyverse)
 
