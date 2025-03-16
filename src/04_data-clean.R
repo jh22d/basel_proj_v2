@@ -21,10 +21,11 @@ bank_full <- all_bank_time_fixed%>%
   left_join(macro%>%select(-...1), by = c('year','country'))
 
 # convert indicator variables T, P and TP
-df_for_data <- bank_full %>%
+df_for_stata <- bank_full %>%
        mutate(T = ifelse(country == "Canada", 1, 0),
               P = ifelse(year >= policy_change_year, 1, 0),
               TP = T * P)
 
 
-
+write.csv(df_for_stata, "data/processed/df_for_stata.csv")
+# 
