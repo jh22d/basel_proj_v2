@@ -50,7 +50,6 @@ D-SIBs
 2.	Truist Financial:tfc
 3.	SunTrust Banks
 4.	Regions Financial: rf
-5.	PNC Financial Services: pnc
 6.	Fifth Third Bank:fitb
 7.	Capital One Financial: cof
 8.	American Express: axp
