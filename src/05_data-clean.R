@@ -2,12 +2,13 @@
 library(readr)
 library(tidyverse)
 library(lubridate)
-macro <- read_csv("data/processed/macro.csv")
-all_bank_bg <- read_csv("data/processed/all_bank_bg.csv")
 
+macro <- read_csv("data/processed/macro.csv")
+t1c_all <- read_csv("data/processed/t1c_all.csv")
+all_bank_bg <- read_csv("data/processed/all_bank_bg.csv")
 all_bank_df <- read_csv("data/processed/all_bank_df.csv")
 
-# convert the exact date to year and yearquarter 
+# convert the exact date to year and yearquarter for bankwise info except t1c
 all_bank_time_fixed <- all_bank_df%>%
   mutate(year=year(date), 
          quarter=quarter(date), 
@@ -15,8 +16,18 @@ all_bank_time_fixed <- all_bank_df%>%
   filter(year >= start_year & year <= end_year)%>%
   select(-c(date,...1,  quarter))
 
+# convert the exact date to year and yearquarter for t1c info
+t1c_fixed <- t1c_all%>%
+  mutate(year=year(Date), 
+         quarter=quarter(Date), 
+         yr_qtr = paste0(year,"q",quarter))%>%
+  filter(year >= start_year & year <= end_year)%>%
+  select(-c(Date,...1,  quarter, year))
+
+
 # combine 3 dataset
 bank_full <- all_bank_time_fixed%>%
+  left_join(t1c_fixed, by=c('yr_qtr','bank'))%>%
   left_join(all_bank_bg%>%select(-...1), by='bank')%>%
   left_join(macro%>%select(-...1), by = c('year','country'))
 
