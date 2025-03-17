@@ -49,13 +49,12 @@ D-SIBs
 1.	U.S. Bancorp:usb
 2.	Truist Financial:tfc
 3.	SunTrust Banks
-4.	Regions Financial: rf
-5.	Fifth Third Bank:fitb
-6.	Capital One Financial: cof
-7.	American Express: axp
-8.	Ally Financial: ally
-9.	Zions: zion
-10.	Mufg americans holdings:mufg
+5.	Regions Financial: rf
+6.	Fifth Third Bank:fitb
+7.	Capital One Financial: cof
+8.	American Express: axp
+9.	Ally Financial: ally
+10.	Zions: zion
 11.	Santander Holdings USA: sov
 12.	RBS Citizens Financial Group: cfg
 13.	Northern Trust: ntrs
