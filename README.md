@@ -50,20 +50,19 @@ D-SIBs
 2.	Truist Financial:tfc
 3.	SunTrust Banks
 4.	Regions Financial: rf
-6.	Fifth Third Bank:fitb
-7.	Capital One Financial: cof
-8.	American Express: axp
-9.	Ally Financial: ally
-10.	Zions: zion
-11.	Mufg americans holdings:mufg
-12.	Santander Holdings USA: sov
-13.	RBS Citizens Financial Group: cfg
-14.	Northern Trust: ntrs
-15.	M&T Bank: mtb
-16.	Huntington Bancshares: hban
-17.	Discover Financial Services: dfs
-18.	Comerica: cma
-19.	BMO Financial Corp.
+5.	Fifth Third Bank:fitb
+6.	Capital One Financial: cof
+7.	American Express: axp
+8.	Ally Financial: ally
+9.	Zions: zion
+10.	Mufg americans holdings:mufg
+11.	Santander Holdings USA: sov
+12.	RBS Citizens Financial Group: cfg
+13.	Northern Trust: ntrs
+14.	M&T Bank: mtb
+15.	Huntington Bancshares: hban
+16.	Discover Financial Services: dfs
+17.	Comerica: cma
 
 
 **CA**
