@@ -25,7 +25,8 @@ Clustered standard error: vce(cluster country)
 - p.9 - p.12 in bis.org/bcbs/pibl/d544.pdf)
 
 ### EDA & Viz
-weighted T1C (p.13 in bis.org/bcbs/pibl/d544.pdf)
+- evolution of all avg t1c
+- weighted tic (p.13 in bis.org/bcbs/pibl/d544.pdf)
 
 
 
