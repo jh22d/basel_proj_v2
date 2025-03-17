@@ -4,13 +4,27 @@
 
 Period: 2011-2018
 
-**US**
+Sample: All G-SIBs and D-SIBs in Canada and the US
 
-Macro:
--	GDP, CPI, stock_idx, RIR (real interest rate)
+y: roe
+
+fe: 
+
+- Did estimator: TP
+
+- Macro: GDP, CPI, stock_idx, RIR (real interest rate)
   
-Bankwise:
--	Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj  EBIT (Earnings before interest and tax)
+- Bankwise: Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj_EBIT (Earnings before interest and tax)
+
+- Control for invariant: absorb(group tq_var): group: based on the Tier 1 capital -- more than !!! (e.g. euro 3 million) considered as group 1 banks
+
+Clustered standard error: vce(cluster country)
+
+
+
+Samples:
+
+**US**
 
 G-SIBs
 1.	JPMORGAN CHASE & CO: jpm
@@ -39,19 +53,12 @@ D-SIBs
 14.	Northern Trust: ntrs
 15.	M&T Bank: mtb
 16.	Huntington Bancshares: hban
-17.	HSBC North America Holdings
-18.	Discover Financial Services: dfs
-19.	Comerica: cma
-20.	BMO Financial Corp.
+17.	Discover Financial Services: dfs
+18.	Comerica: cma
+19.	BMO Financial Corp.
 
 
 **CA**
-
-Macro:
--	GDP, CPI, stock_idx, RIR (real interest rate)
-
-Bankwise:
--	Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj EBIT (Earnings before interest and tax)
 
 G-SIBs
 1.	RBC
@@ -61,6 +68,6 @@ G-SIBs
 
 D-SIBs
 1.	CIBC: cm
-2.	National Bank of Canada:na
+2.	National Bank of Canada
 
 
