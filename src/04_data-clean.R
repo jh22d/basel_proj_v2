@@ -27,5 +27,5 @@ df_for_stata <- bank_full %>%
               TP = T * P)
 
 
-write.csv(df_for_stata, "data/processed/df_for_stata.csv")
-# 
+# write.csv(df_for_stata, "data/processed/df_for_stata.csv")
+ 
