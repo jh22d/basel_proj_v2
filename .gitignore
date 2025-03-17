@@ -1,11 +1,8 @@
 # raw data
-data/raw/CA_D-SIBs
-data/raw/CA_G-SIBs
-data/raw/US_D-SIBs
-data/raw/US_G-SIBs
+raw/
 
 # processed data
-data/processed
+processed/
 
 # output
 graph/
