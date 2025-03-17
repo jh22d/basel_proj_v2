@@ -1,6 +1,7 @@
 # basel_proj_v2
 *new sample data selected*
 
+### Design
 
 Period: 2011-2018
 
@@ -19,6 +20,13 @@ fe:
 - Control for invariant: absorb(group tq_var): group: based on the Tier 1 capital -- more than !!! (e.g. euro 3 million) considered as group 1 banks
 
 Clustered standard error: vce(cluster country)
+
+##### Description
+- p.9 - p.12 in bis.org/bcbs/pibl/d544.pdf)
+
+### EDA & Viz
+weighted T1C (p.13 in bis.org/bcbs/pibl/d544.pdf)
+
 
 
 
