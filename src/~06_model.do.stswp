@@ -18,6 +18,7 @@ esttab did_fe did_treatment_fe, ///
     star(* 0.10 ** 0.05 *** 0.01) ///
     label ///
     title("Comparison of Regression Models") ///
+	mtitles("with t1cr" "w/o t1cr") ///
     addnotes("Standard errors clustered at the country level." "*** p<0.01, ** p<0.05, * p<0.10")
 	
 ** FE pt2**
