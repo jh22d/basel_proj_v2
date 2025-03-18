@@ -4,19 +4,34 @@ import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.
 gen tq_var = quarterly(yr_qtr, "YQ")  
 format tq_var %tq  
 
-** FE **
-// Model 1: DID without t1cr
-reghdfe roe TP mkt_cap GSIB rir gdp cpi, absorb(Group tq_var) vce(cluster country)
-eststo DiD_treatment_all_FE
-// Model 2: DID with t1cr
+** FE pt1**
+// Model 1: DID w/o t1cr
+reghdfe roe TP  stock_price rir gdp cpi , absorb(Group tq_var) vce(cluster country)
+eststo did_fe
+// Model 2: DID & t1cr
 reghdfe roe TP t1cr t1c_B GSIB mkt_cap rir gdp cpi, absorb(Group tq_var) vce(cluster country)
-eststo DiD_and_treatment
-// Model 3: DID without t1cr, all covariates used
-reghdfe roe TP t1cr t1c_B GSIB mkt_cap rir gdp cpi, absorb(Group tq_var) vce(cluster country) 
-eststo DiD_only
+eststo did_treatment_fe
 
 // Combine results into one table
-esttab DiD_treatment_all_FE DiD_and_treatment DiD_only, ///
+esttab did_fe did_treatment_fe, ///
+    b(%9.3f) se(%9.3f) ///
+    star(* 0.10 ** 0.05 *** 0.01) ///
+    label ///
+    title("Comparison of Regression Models") ///
+    addnotes("Standard errors clustered at the country level." "*** p<0.01, ** p<0.05, * p<0.10")
+	
+** FE pt2**
+// Model 1: DID without t1cr
+reghdfe roe TP stock_price GSIB mkt_cap rir gdp cpi, absorb(country tq_var) vce(cluster Group)
+eststo m1
+// Model 2: DID with t1cr
+reghdfe roe TP t1cr mkt_cap rir gdp cpi, absorb(country tq_var) vce(cluster Group)
+eststo m2
+// Model 3: DID without t1cr, all covariates used
+reghdfe roe TP t1cr t1c_B GSIB mkt_cap rir gdp cpi, absorb(country tq_var) vce(cluster Group)
+eststo m3
+// Combine results into one table
+esttab m1 m2 m3,///
     b(%9.3f) se(%9.3f) ///
     star(* 0.10 ** 0.05 *** 0.01) ///
     label ///
