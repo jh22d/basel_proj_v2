@@ -5,7 +5,9 @@ library(lubridate)
 
 macro <- read_csv("data/processed/macro.csv")
 t1c_all <- read_csv("data/processed/t1c_all.csv")
-t1c_group <- read_csv("data/processed/t1c_bankwise_mean_group.csv")%>%select(bank,Group)
+t1c_group <- read_csv("data/processed/t1c_bankwise_mean_group.csv")%>%
+  select(bank,Group)%>%
+  mutate(bank=recode(bank,"ry"="rbc", "na"="nbc"))
 all_bank_bg <- read_csv("data/processed/all_bank_bg.csv")
 all_bank_df <- read_csv("data/processed/all_bank_df.csv")
 
