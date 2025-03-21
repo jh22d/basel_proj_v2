@@ -16,7 +16,7 @@ macro <-  macro_raw %>%
          log_gdp = log(gdp),
          log_cpi=log(cpi))%>%
   select(-iso2c,-iso3c,-indicators_macro)
-# write.csv(macro_df,"data/processed/macro.csv")
+# write.csv(macro,"data/processed/macro.csv")
 
 # 
 # ggplot(macro, aes(x = year, y = log10_gdp, color = country)) +
