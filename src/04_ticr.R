@@ -13,7 +13,8 @@ t1c_all <- cbind(t1c_gsib_us,t1c_dsib_us,t1c_ca)%>%
     bank = recode(tolower(
       str_extract(equity_detail, "(?<=\\().*?(?=\\s[A-Z]{2}\\sEquity)")
     ),"2370058d"="suntrust"),
-    t1c_B=t1c/1000000000)%>%
+    t1c_B=t1c/1000000000,
+    log_t1c_B=log(t1c_B))%>%
   select(-c(equity_detail,t1c))
 write.csv(t1c_all,"data/processed/t1c_all.csv")
 
