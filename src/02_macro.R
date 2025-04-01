@@ -18,11 +18,11 @@ macro <-  macro_raw %>%
   select(-iso2c,-iso3c,-indicators_macro)
 # write.csv(macro,"data/processed/macro.csv")
 
-# 
-# ggplot(macro, aes(x = year, y = log10_gdp, color = country)) +
-#   geom_line() +
-#   labs(title = "GDP Per Capita Over Time by Country",
-#        x = "Year",
-#        y = "GDP Per Capita (constant USD)",
-#        color = "Country") +
-#   theme_minimal()
+
+ggplot(macro, aes(x = year, y = cpi, color = country)) +
+  geom_line() +
+  labs(title = "GDP Per Capita Over Time by Country",
+       x = "Year",
+       y = "GDP Per Capita (constant USD)",
+       color = "Country") +
+  theme_minimal()

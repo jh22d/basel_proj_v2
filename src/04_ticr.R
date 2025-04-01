@@ -26,7 +26,7 @@ t1c_bankwise_mean_group <- t1c_all%>%
                            "Canada",
                            "US"),
          Group = if_else(bank_mean_t1c_B>t1c_threshold,
-                         "Large","Small"))
+                         1,0))
 write.csv(t1c_bankwise_mean_group,"data/processed/t1c_bankwise_mean_group.csv")
 
 t1c_bankwise_mean_plt <- t1c_bankwise_mean_group %>%
