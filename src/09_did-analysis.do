@@ -9,48 +9,49 @@ format tq_var %tq
 // reghdfe roe TP T P, absorb(Group) vce(cluster bank)
 // eststo did_plain
 // Model 2: 
-reghdfe roe TP  T P  adj_ebitda  gdp cpi rir, absorb(yr_qtr bank) vce(cluster bank)
-eststo did_full_new
-reghdfe roe TP  T P  stock_price gdp cpi rir, absorb(yr_qtr bank) vce(cluster bank)
-eststo did_post_presentation
+reghdfe roe TP  T P, absorb(yr_qtr bank) vce(cluster bank)
+eststo plain
+reghdfe roe TP  T P leverage_ratio adj_ebitda mkt_cap stock_price t1c_B gdp cpi rir, absorb(yr_qtr bank) vce(cluster bank)
+eststo full
 // Combine results into one table
-esttab  did_full_new  did_post_presentation, ///
+esttab  plain full, ///
     b(%9.3f) se(%9.3f) ///
     star(* 0.10 ** 0.05 *** 0.01) ///
     label ///
     title("Comparison of Regression Models") ///
- 	mtitles(" " "") ///
+ 	mtitles("Plain" "Full") ///
     addnotes("Standard errors clustered at the bank level." "*** p<0.01, ** p<0.05, * p<0.10")
 
-// TP                         -1.486** 
-//                           (0.644)   
+// ----------------------------------------------------
+//                             Plain            Full   
+// ----------------------------------------------------
+// TP                         -3.033***       -2.516*** 
 //
-// T                          15.780*  
-//                           (8.777)   
+// T                           0.000           0.000   
 //
-// P                           0.000   
-//                               (.)   
+// P                           0.000           0.000    
 //
-// adj_ebitda                  0.000*  
-//                           (0.000)   
+// Leverage Ratio                              0.613** 
 //
-// Group                      -5.345   
-//                           (3.159)   
+// Adjusted EBITDA                             0.000***  
 //
-// gdp                         0.001   
-//                           (0.001)   
+// Market Cap                                  0.000    
 //
-// cpi                        -0.028   
-//                           (0.905)   
+// Stock Price                                -0.027   
 //
-// rir                         0.106   
-//                           (0.175)   
+// T1C_B                                      -0.017    
 //
-// Constant                  -23.034   
-//                         (125.671)   
-// ------------------------------------
-// Observations                  680   
-// ------------------------------------
-// Standard errors in parentheses
-// Standard errors clustered at the country level.
-// *** p<0.01, ** p<0.05, * p<0.10
+// GDP                                         0.000     
+//
+// CPI                                         2.220**  
+//
+// RIR                                        -0.113    
+//
+// Constant                   11.195***     -238.003** 
+// ----------------------------------------------------
+// Observations                  979             542   
+// ----------------------------------------------------
+// Standard errors clustered at the bank level.
+// `*** p<0.01, ** p<0.05, * p<0.10`
+
+

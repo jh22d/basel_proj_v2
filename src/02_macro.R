@@ -19,10 +19,23 @@ macro <-  macro_raw %>%
 # write.csv(macro,"data/processed/macro.csv")
 
 
-ggplot(macro, aes(x = year, y = cpi, color = country)) +
+gdp_plt <- ggplot(macro, aes(x = year, y = gdp, color = country)) +
   geom_line() +
   labs(title = "GDP Per Capita Over Time by Country",
        x = "Year",
        y = "GDP Per Capita (constant USD)",
        color = "Country") +
   theme_minimal()
+ggsave("output/graph/gdp.png",gdp_plt)
+
+
+
+
+cpi_plt <- ggplot(macro, aes(x = year, y = cpi, color = country)) +
+  geom_line() +
+  labs(title = "CPI Over Time by Country",
+       x = "Year",
+       y = "CPI",
+       color = "Country") +
+  theme_minimal()
+ggsave("output/graph/cpi.png",cpi_plt)
