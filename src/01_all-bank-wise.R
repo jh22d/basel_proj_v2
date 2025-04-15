@@ -1,6 +1,5 @@
 # outputs: 
-# string: US_GSIB_banks, US_DSIB_banks, CA_GSIB_banks, CA_DSIB_banks
-# df: all_bank_df
+# df: all_bank_wise
 
 library(readxl)
 
@@ -70,5 +69,5 @@ all_bank_list <- c(US_GSIB_data_list, US_DSIB_data_list,
        CA_GSIB_data_list, CA_DSIB_data_list)
 
 all_bank_wise <- do.call(rbind, all_bank_list)
-# write.csv(all_bank_wise,"data/processed/all_bank_wise.csv")
+write.csv(all_bank_wise,"data/processed/all_bank_wise.csv")
 

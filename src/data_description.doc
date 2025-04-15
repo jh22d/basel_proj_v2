@@ -1,0 +1,30 @@
+{\rtf1\fs24
+\pard\qc
+descriptive statistic\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2160\clbrdrt\brdrs\cellx2736\clbrdrt\brdrs\cellx3744\clbrdrt\brdrs\cellx4608\clbrdrt\brdrs\cellx5616\clbrdrt\brdrs\cellx6624
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2160\cellx2736\cellx3744\cellx4608\cellx5616\cellx6624
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2160\clbrdrb\brdrs\cellx2736\clbrdrb\brdrs\cellx3744\clbrdrb\brdrs\cellx4608\clbrdrb\brdrs\cellx5616\clbrdrb\brdrs\cellx6624
+\ql VARIABLES\cell\qc N\cell\qc mean\cell\qc sd\cell\qc min\cell\qc max\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2160\cellx2736\cellx3744\cellx4608\cellx5616\cellx6624
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql v1\cell\qc 983\cell\qc 492\cell\qc 283.9\cell\qc 1\cell\qc 983\cell\row
+\ql roe\cell\qc 979\cell\qc 10.82\cell\qc 6.379\cell\qc -15.82\cell\qc 33.47\cell\row
+\ql t1cr\cell\qc 981\cell\qc 12.84\cell\qc 1.783\cell\qc 9.520\cell\qc 19.90\cell\row
+\ql stock_price\cell\qc 934\cell\qc 50.42\cell\qc 36.50\cell\qc 3.330\cell\qc 254.8\cell\row
+\ql leverage_ratio\cell\qc 875\cell\qc 8.850\cell\qc 2.407\cell\qc 0\cell\qc 16.40\cell\row
+\ql year\cell\qc 983\cell\qc 2,015\cell\qc 2.287\cell\qc 2,011\cell\qc 2,018\cell\row
+\ql adj_ebitda_B\cell\qc 704\cell\qc 2.532\cell\qc 2.404\cell\qc -8.083\cell\qc 10.73\cell\row
+\ql mkt_cap_B\cell\qc 934\cell\qc 60.60\cell\qc 66.29\cell\qc 2.595\cell\qc 379.2\cell\row
+\ql t1c_B\cell\qc 852\cell\qc 543.7\cell\qc 2,556\cell\qc 5.179\cell\qc 16,485\cell\row
+\ql GSIB\cell\qc 983\cell\qc 0.391\cell\qc 0.488\cell\qc 0\cell\qc 1\cell\row
+\ql gdp\cell\qc 983\cell\qc 53,919\cell\qc 5,562\cell\qc 42,044\cell\qc 60,127\cell\row
+\ql cpi\cell\qc 983\cell\qc 108.7\cell\qc 3.611\cell\qc 102.9\cell\qc 115.2\cell\row
+\ql rir\cell\qc 959\cell\qc 1.812\cell\qc 0.728\cell\qc -0.237\cell\qc 3.675\cell\row
+\ql T\cell\qc 983\cell\qc 0.195\cell\qc 0.397\cell\qc 0\cell\qc 1\cell\row
+\ql P\cell\qc 983\cell\qc 0.631\cell\qc 0.483\cell\qc 0\cell\qc 1\cell\row
+\ql TP\cell\qc 983\cell\qc 0.122\cell\qc 0.328\cell\qc 0\cell\qc 1\cell\row
+\ql tq_var\cell\qc 983\cell\qc 219.6\cell\qc 9.212\cell\qc 204\cell\qc 235\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2160\clbrdrb\brdrs\cellx2736\clbrdrb\brdrs\cellx3744\clbrdrb\brdrs\cellx4608\clbrdrb\brdrs\cellx5616\clbrdrb\brdrs\cellx6624
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+}

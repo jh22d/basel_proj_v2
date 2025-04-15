@@ -1,5 +1,6 @@
 # output:
-# df: all_bank
+# df: all_bank_bg
+
 source("src/00_variables.R")
 source("src/01_all-bank-wise.R")
 macro<-read_csv("data/processed/macro.csv")
@@ -14,5 +15,5 @@ all_bank_bg <- data.frame(
           rep(1, length(CA_GSIB_banks)),
           rep(0, length(CA_DSIB_banks)))
 )
-# write.csv(all_bank_bg,"data/processed/all_bank_bg.csv")
+write.csv(all_bank_bg,"data/processed/all_bank_bg.csv")
 

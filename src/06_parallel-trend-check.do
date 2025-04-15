@@ -1,5 +1,9 @@
-// This file is modified on Msr 24, 2025, after the meeting with TA 
-. import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.csv", case(preserve) stringcols(8 10 13 20) numericcols(1 2 3 4 5 6 7 9 11 12 14 15 16 17 18 19 21 22 23) clear 
+// This file is modified on Apr 11, 2025, after the meeting with TA 
+
+. import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.csv", case(preserve) stringcols(6 8 12) numericcols(1 2 3 4 5 7 9 10 11 13 14 15 16 17 18 19) clear 
+
+// . import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.csv", case(preserve) stringcols(8 10 13 20) numericcols(1 2 3 4 5 6 7 9 11 12 14 15 16 17 18 19 21 22 23) clear 
+
 
 gen tq_var = quarterly(yr_qtr, "YQ")  
 format tq_var %tq  

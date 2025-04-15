@@ -1,6 +1,10 @@
 // This file is created on Mar 24, 2025 after the office hour
 
-. import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.csv", case(preserve) stringcols(8 10 13 20) numericcols(1 2 3 4 5 6 7 9 11 12 14 15 16 17 18 19 21 22 23) clear 
+
+. import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.csv", case(preserve) stringcols(6 8 12) numericcols(1 2 3 4 5 7 9 10 11 13 14 15 16 17 18 19) clear 
+
+
+// . import delimited "/Users/jinghan/Desktop/basel_proj/data/processed/df_for_stata.csv", case(preserve) stringcols(8 10 13 20) numericcols(1 2 3 4 5 6 7 9 11 12 14 15 16 17 18 19 21 22 23) clear 
 
 gen tq_var = quarterly(yr_qtr, "YQ")  
 format tq_var %tq  
@@ -34,19 +38,18 @@ outreg2 using data_description.doc, replace sum(log) title(descriptive statistic
 
 
 
-//        Variable | Obs     Mean       Std. dev.        Min          Max
-// ----------------+-----------------------------------------------------------
-//             ROE | 979     10.82         6.38        -15.82         33.47
-// ----------------+-----------------------------------------------------------
-//            T1CR | 981     12.84         1.78          9.52         19.9
-//           T1C_B | 852    543.66      2556.17          5.18      16485.34
-//     Stock Price | 934     50.42        36.50          3.33        254.76
-//      Market Cap | 934      6.06e+10     6.63e+10      2.60e+09      3.79e+11
-//  Leverage Ratio | 875      8.850        2.41          0            16.4
-// Adjusted EBITDA | 704      2.53e+09     2.40e+09     -8.08e+09      1.07e+10
-// ----------------+-----------------------------------------------------------
-//             GDP | 983  53918.73      5562.20      42043.64      60127.21
-//             CPI | 983    108.70         3.61        102.91        115.16
-//             RIR | 959      1.81          .73          -.24          3.67
-
+                  Variable |  Obs      Mean    Std. dev.     Min       Max
+---------------------------+------------------------------------------------
+                        #  |  983        -         -         1       983
+                       ROE |  979      10.82      6.38     -15.82     33.47
+                      T1CR |  981      12.84      1.78       9.52     19.90
+               Stock Price |  934      50.42     36.50       3.33    254.76
+            Leverage Ratio |  875       8.85      2.41       0        16.40 
+       Adjusted EBITDA (B) |  704       2.53      2.40      -8.08      10.73
+ Market Capitalization (B) |  934      60.60     66.29       2.60     379.24
+        Tire 1 Capital (B) |  852     543.66   2556.17       5.18   16485.34
+---------------------------+-------------------------------------------------
+                       GDP |  983   53918.73   5562.20   42043.64   60127.21
+                       CPI |  983     108.70      3.61     102.91     115.16
+                       RIR |  959       1.81       .73       -.24       3.67
 

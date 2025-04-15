@@ -1,3 +1,7 @@
+# outputs: 
+# df: macro
+# graph: gdp_plt, cpi_plt
+
 source("src/00_variables.R")
 
 library(WDI)
@@ -13,10 +17,11 @@ macro <-  macro_raw %>%
          cpi=FP.CPI.TOTL,
          rir=FR.INR.RINR,
          country=factor(country),
-         log_gdp = log(gdp),
-         log_cpi=log(cpi))%>%
+         # log_gdp = log(gdp),
+         # log_cpi=log(cpi)
+         )%>%
   select(-iso2c,-iso3c,-indicators_macro)
-# write.csv(macro,"data/processed/macro.csv")
+write.csv(macro,"data/processed/macro.csv")
 
 
 gdp_plt <- ggplot(macro, aes(x = year, y = gdp, color = country)) +
@@ -27,8 +32,6 @@ gdp_plt <- ggplot(macro, aes(x = year, y = gdp, color = country)) +
        color = "Country") +
   theme_minimal()
 ggsave("output/graph/gdp.png",gdp_plt)
-
-
 
 
 cpi_plt <- ggplot(macro, aes(x = year, y = cpi, color = country)) +
