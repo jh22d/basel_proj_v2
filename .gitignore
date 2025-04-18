@@ -1,10 +1,5 @@
-# raw data
-CA_D-SIBs/
-CA_G-SIBs/
-US_D-SIBs/
-US_G-SIBs/
-
-# processed data
+# data
+raw/
 processed/
 
 # output
