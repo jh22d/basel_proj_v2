@@ -24,6 +24,14 @@ esttab  plain full, ///
 
 	
 
+          Number of obs   = 542
+          F(   9,     19) =   15.90
+          Prob > F        =   0.000
+          R-squared       =    0.869
+Number of clusters (bank) =   20         
+          Root MSE        =    2.558
+
+
 ----------------------------------------------------
                             Plain            Full   
 ----------------------------------------------------

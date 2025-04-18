@@ -27,9 +27,7 @@ t1c_bankwise_mean_group <- t1c_all%>%
   arrange(desc(bank_mean_t1c_B))%>%
   mutate(Country = if_else(bank %in% c('ry', 'td', 'bmo', 'cm', 'na', 'nbs'), 
                            "Canada",
-                           "US"),
-         Group = if_else(bank_mean_t1c_B>t1c_threshold,
-                         1,0))
+                           "US"))
 
 t1c_bankwise_mean_plt <- t1c_bankwise_mean_group %>%
   filter(bank != "mufg") %>%  # Filter out "mufg"

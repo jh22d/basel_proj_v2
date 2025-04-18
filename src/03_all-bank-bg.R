@@ -3,7 +3,7 @@
 
 source("src/00_variables.R")
 source("src/01_all-bank-wise.R")
-macro<-read_csv("data/processed/macro.csv")
+macro<-read.csv("data/processed/macro.csv")
 
 # create a df to match bank, country and scale
 all_bank_bg <- data.frame(
