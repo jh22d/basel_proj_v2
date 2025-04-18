@@ -1,25 +1,25 @@
-# basel_proj_v2
-*new sample data selected*
+# basel_proj
+
 
 ### Design
 
-Period: 2011-2018
+Period: 2011-2017
 
-Sample: All G-SIBs and D-SIBs in Canada and the US
+Sample: 6 G-SIBs and D-SIBs in Canada and 24 the US
 
 y: roe
 
-fe: 
+Model: 
 
 - Did estimator: TP
 
-- Macro: GDP, CPI, stock_idx, RIR (real interest rate)
+- Macro: GDP, CPI, RIR 
   
-- Bankwise: Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj_EBIT (Earnings before interest and tax)
+- Bankwise: Roe, T1cr, stock_price, mkt_cap, leverage ratio, adj_EBITDA
 
-- Control for invariant: absorb(group tq_var): group: based on the Tier 1 capital -- more than !!! (e.g. euro 3 million) considered as group 1 banks
+- Fixed effect: time, bank
 
-Clustered standard error: vce(cluster country)
+- Clustered standard error: bank
 
 ##### Description
 - p.9 - p.12 in bis.org/bcbs/pibl/d544.pdf)
@@ -49,19 +49,19 @@ D-SIBs
 1.	U.S. Bancorp:usb
 2.	Truist Financial:tfc
 3.	SunTrust Banks
-5.	Regions Financial: rf
-6.	Fifth Third Bank:fitb
-7.	Capital One Financial: cof
-8.	American Express: axp
-9.	Ally Financial: ally
-10.	Zions: zion
-11.	Santander Holdings USA: sov
-12.	RBS Citizens Financial Group: cfg
-13.	Northern Trust: ntrs
-14.	M&T Bank: mtb
-15.	Huntington Bancshares: hban
-16.	Discover Financial Services: dfs
-17.	Comerica: cma
+4.	Regions Financial: rf
+5.	Fifth Third Bank:fitb
+6.	Capital One Financial: cof
+7.	American Express: axp
+8.	Ally Financial: ally
+9.	Zions: zion
+10.	Santander Holdings USA: sov
+11.	RBS Citizens Financial Group: cfg
+12.	Northern Trust: ntrs
+13.	M&T Bank: mtb
+14.	Huntington Bancshares: hban
+15.	Discover Financial Services: dfs
+16.	Comerica: cma
 
 
 **CA**
@@ -69,11 +69,11 @@ D-SIBs
 G-SIBs
 1.	RBC
 2.	TD
-3.	BMO
-4.	BNS
 
 D-SIBs
-1.	CIBC: cm
-2.	National Bank of Canada
+1.	BMO
+2.	BNS
+3.	CIBC
+4.	National Bank of Canada
 
 
