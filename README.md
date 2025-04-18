@@ -21,13 +21,8 @@ Model:
 
 - Clustered standard error: bank
 
-##### Description
-- 
 
-
-
-
-Samples:
+### Sample
 
 **US**
 
