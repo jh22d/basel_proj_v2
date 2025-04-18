@@ -6,8 +6,6 @@ processed/
 
 # output
 graph/
-data/
-statistics/
 
 # History files
 .Rhistory
