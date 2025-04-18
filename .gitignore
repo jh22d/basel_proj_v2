@@ -1,5 +1,4 @@
 # data
-raw/
 processed/
 
 # output
@@ -47,7 +46,6 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-docs/
 
 # translation temp files
 po/*~
